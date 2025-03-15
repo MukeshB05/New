@@ -1,0 +1,360 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">      
+
+<script type='text/javascript'>
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+document.onkeydown=function(e)
+{
+if(e.which == 123)
+isCtrl=true;
+if (((e.which == 85) || (e.which == 65) || (e.which == 88) || (e.which == 67) || (e.which == 86) || (e.which == 2) || (e.which == 3) || (e.which == 123) || (e.which == 83)) && isCtrl == true)
+{
+alert('TV4WAP');
+return false;
+}
+}
+// right click code
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+    alert('KashurFlix);
+return false;
+}
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+//select content code disable  alok goyal
+function killCopy(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=killCopy
+document.onclick=reEnable
+}
+</script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://tv4wap.neocities.org/style.css">
+
+	<link rel="stylesheet" type="text/css" href="https://axocdn.jdi5.com/css/tv4wap.wapaxo.com/style.css"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+<div class="content">
+  
+  <div class="rwd-media">
+     <iframe name="iframe_a" frameborder="1" src="https://its-ferdos-alom.top/jion/play.php?cid=1984" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen  encrypted-media />      </iframe> </center>
+  </div>
+  
+  
+</div>
+
+<div class="content">
+  
+  <div class="rwd-mediaa">
+    <iframe  src="" width="100%" height="252" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  
+  
+</div>
+
+
+
+
+<div class="group-filter">   <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search Channels" onkeyup="searchChannels()">
+<select id="group-select" onchange="filterChannels()">
+            <option value="all">All</option>
+            <option value='Entertainment'>Entertainment</option><option value='Movies'>Movies</option><option value='Kids'>Kids</option><option value='Sports'>Sports</option>
+<option value='News'>News</option>  
+<option value='Music'>Music</option> <option value='Lifestyle'>Lifestyle</option><option value='Infotainment'>Infotainment</option>  
+<option value='Devotional'>Devotional</option> <option value='Educational'>Educational</option><option value='Business'>Business</option>  
+       </select>
+</div></div>
+
+
+<main id="app"></main>
+
+<script>
+
+
+function getData() {
+
+  fetch("https://shz.al/fGrz.txt")
+
+    .then(res => {
+
+      return res.json();
+
+    })
+
+    .then(json => {
+
+      console.log(json.data);
+
+      const html  = json.result
+
+        .map(function(item) {
+
+          return  " <div align='center' class='rsz' data-group='" + item.genre + "'  data-name='" + item.title + "'><img src='"+item.logo+"'><a target='iframe_a' href='https://its-ferdos-alom.top/jion/play.php?cid="+item.id+"'><p>"+ item.title +"</p></a></img></div></div>";
+
+        })
+
+        .join("");
+
+      console.log(html);
+
+      document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
+
+    })
+
+    .catch(error => {
+
+      console.log(error);
+
+    });
+
+}
+
+getData();
+</script>
+
+
+    <style>
+        
+
+  
+        
+
+        
+body{width:100%;background:#ffffff;margin:0} 
+.rsz{width:23%;display:inline-block;
+background:fff;
+  line-height: 1;
+  text-decoration: none;
+  color: #333333;
+  font-size: 9px;
+  border-radius: 0px;
+  margin: 1px 1px 1px 1px;
+  height: 90px;
+  font-weight:bold ;
+
+  border-top: 1px solid #3692e0;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #3692e0;
+  transition: 0.5s;
+  box-shadow: inset 0px 0px 3px 2px rgba(142, 139, 139, 0.5);
+
+  
+
+vertical-align:middle;vertical-align:middle;align:center;align-items:center;vertical-align:middle;horizontal-align:middle;}
+
+
+img{border: px solid white;border-radius: 1px;align:center;align-items:center;vertical-align:middle;horizontal-align:middle;margin:0px;img-align: center;width:55%;image-rendering: auto;margin-right:5px;margin-left:5px; margin-top:9px}        a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none;} 
+
+
+      .rwd-mediaa{
+  position: ;
+  width: 100%;
+  height: 258px;
+  
+}
+
+.rwd-mediaa iframe,
+.rwd-media video {background:#fff;
+  position: ;
+  width: 100%;
+  height: 258px;  
+}
+
+.rwd-media {background:#000000;
+  position: ;
+  width: 100%;
+  height: 1px;
+  
+}
+
+.rwd-media iframe,
+.rwd-media video {
+  position: fixed;
+  width: 100%;
+  height:220px ;  left:-2px
+}
+
+
+body { background: #fff; margin: 0; }
+
+.content { width: 100%; padding: ; background: #000000; }
+  
+  
+  
+ .group-filter {background:#A8E4A0;padding:0px;
+            margin-bottom: 0px;
+            text-align: center;position: fixed; 
+        }
+        ..group-filter select {
+            padding: 3px;
+            font-size: 12px;
+            border-radius: 15px;
+            border: 2px solid #A8E4A0;
+            background-color: #fff;
+            color: #333;
+        }
+
+.search-bar input {
+            padding: 3px;
+            font-size: 12px;
+            border-radius: 15px;
+            border: 2px solid #A8E4A0;
+            background-color: #fff;
+            color: #333;
+        }
+        .search-bar {padding: 3px;
+            font-size: 12px;
+            border-radius: 1px;
+            border: 2px solid #A8E4A0;
+            background-color: #A8E4A0;
+            color: #333;position: fixed; width:100%;top:220px
+        }
+
+
+    </style>
+    <script>
+        function filterChannels() {
+            var selectedGroup = document.getElementById('group-select').value;
+            var channels = document.querySelectorAll('.rsz');
+            
+            channels.forEach(function(channel) {
+                if (selectedGroup === 'all' || channel.getAttribute('data-group') === selectedGroup) {
+                    channel.style.display = 'inline-block';
+                } else {
+                    channel.style.display = 'none';
+                }
+            });
+        }
+
+        function searchChannels() {
+            var input = document.getElementById('search-input').value.toLowerCase();
+            var channels = document.querySelectorAll('.rsz');
+            
+            channels.forEach(function(channel) {
+                var name = channel.getAttribute('data-name').toLowerCase();
+                if (name.includes(input)) {
+                    channel.style.display = 'inline-block';
+                } else {
+                    channel.style.display = 'none';
+                }
+            });
+        }
+
+        const checkbox = document.getElementById("checkbox");
+        checkbox.addEventListener("change", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+
+
+
+
+
+<!doctype html><html lang="en"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <style>    body {      background-color: #121212;      font-family: Arial, sans-serif;      margin: 0;      padding: 0;      position: relative; /* Ensures overlay can be positioned relative to the body */    }    /* Overlay style at the bottom of the page */    .scrolling-text-overlay {      position: fixed;      bottom: 0;      left: 0;      width: 100%;      background-color: red; /* Red background with transparency */      color: black; /* Text color */      font-size: 18px;      font-weight: bold;      display: flex;      align-items: center; /* Vertically center the text */      justify-content: center;      height: 30px; /* Height of the overlay */      border-radius: 15px 15px 0 0; /* Rounded top corners */      z-index: 1000; /* Ensures it appears on top of other content */    }    /* Scrolling text container */    .scrolling-text-container {      width: 99%; /* Width set to 99% */      overflow: hidden;    }    /* Scrolling text animation */    .scrolling-text {      display: inline-block;      white-space: nowrap;      animation: scrollText 20s linear infinite; /* Slower animation */      color: black; /* Black text */      font-weight: bold; /* Bold text */      font-size: 18px;    }    @keyframes scrollText {      0% {        transform: translateX(100%);      }      100% {        transform: translateX(-100%);      }    }  </style></head><body>  <!-- Your page content goes here -->  <!-- Scrolling text overlay at the bottom -->  <div class="scrolling-text-overlay">    <div class="scrolling-text-container">      <p class="scrolling-text">& SITE DEVELOPED BY KASHURFLIX , WE DON'T HAVE OWNERSHIP OF ANY CONTENT  ALL THE  LINKS ARE AVAILABLE FREELY ON INTERNET .LOVE FROM KASHMIR &</p>    </div>  </div></body></html>
+
+
+
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>     <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>     <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>     <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        // Show the confirmation dialog
+        if (confirm("Join Our Telegram Channel For Latest Update?")) {
+            // Open the Telegram link in a new tab
+            window.open("https://t.me/kashurflix_playlists", '_blank');
+        }
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* Basic styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 2000px; /* Just for demonstration, to create scrollable content */
+            background-color: #f4f4f4; /* Light background color */
+        }
+
+        /* Styles for the Telegram button */
+        #telegram-button {
+            position: fixed;
+            bottom: 20px; /* Distance from the bottom */
+            right: 20px; /* Distance from the right */
+            z-index: 1000; /* Ensure it is on top of other elements */
+            background-color: #0088cc; /* Telegram color */
+            border-radius: 50%; /* Make it circular */
+            padding: 10px; /* Space around the icon */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            transition: transform 0.2s; /* Smooth transition for hover effect */
+        }
+
+        /* Styles for the Telegram icon */
+        #telegram-button img {
+            width: 50px; /* Size of the icon */
+            height: 50px; /* Size of the icon */
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Floating Telegram Button -->
+    <a href="https://t.me/+TP1EQM2kQg9mZTQ1" target="_blank" id="telegram-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/WLB_Telegram_icon.svg/1024px-WLB_Telegram_icon.svg.png" alt="Join us on Telegram" />
+    </a>
+
+    <script>
+        // Optional: Add hover effect
+        document.getElementById('telegram-button').addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.1)'; // Scale up on hover
+        });
+
+        document.getElementById('telegram-button').addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)'; // Scale back down
+        });
+    </script>
+
+</body>
+</html>
+'));
+//-->
+</script>
